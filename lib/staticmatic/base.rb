@@ -1,10 +1,9 @@
 module StaticMatic
   # Directories generated for a new site setup
   BASE_DIRS = %w{
-    site/
-    site/stylesheets
-    site/images
-    site/javascripts
+    stylesheets
+    images
+    javascripts
     src/
     src/pages/
     src/layouts
@@ -41,7 +40,7 @@ module StaticMatic
       @current_file_stack = []
       @base_dir = File.expand_path(base_dir)
       @src_dir = "#{@base_dir}/src"
-      @site_dir = "#{@base_dir}/site"
+      @site_dir = "#{@base_dir}"
       @templates_dir = File.dirname(__FILE__) + '/templates/default/'
       
       @layout = "application"
